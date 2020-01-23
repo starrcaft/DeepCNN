@@ -59,3 +59,33 @@ def plot_fit(title):
     plt.show()
 
 plot_fit('initialModel')
+
+criterion = nn.MSELoss()
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+
+#100회 반복
+epoch = 100
+losses = []
+for i in range(epoch):
+    #예측
+    y_pred = model.forward(x)
+    #오차계산
+    loss = criterion(y_pred, y)
+    print("epoch:", i, "loss:", loss.item())
+
+    #오차 누적(계산을 위해서)
+    losses.append(loss)
+    #optimzer 초기화
+    optimizer.zero_grad()
+    #backward를 수행하여 그래디언트 계산
+    loss.backward()
+    #learning rate 만큼 가중치를 주어서 hyper parameter 업데이트
+    optimizer.step()
+
+#진행과 loss에 대한 그래프
+#plt.plot(range(epoch), losses)
+#plt.ylabel('Loss')
+#plt.xlabel('epoch')
+
+plot_fit("Trained Model")
+plt.show()
