@@ -2,16 +2,11 @@
 
 *goal
 
-Final goal is Image Processing by yolo v3
+Final goal is using 
 
 *model List
 
-Before using yolo v3, I will study previous models so figure out what's diffrent between yolo v3 and previous models. The list of previous model is
- -CNN
- -yolo v1
- -SSD.
- 
- After studying, I'll updload my v3 code.
+use CNN model
  
 *environment
 
@@ -23,8 +18,11 @@ FrameWork : PyTorch - 1.1
 Lang : Python - 3.7
 Editor : PyCharm Professional
 
-*Submission
- only code. Because I use gpu server served by university, couldn't upload whole project. So if you want to try, search 'CNN using Pytorch', 'install Pytorch on Ubuntu'. Then you could get information
  
  # CNN
- I follow some blog. If you follow what I uploaded, you could understand step of CNN
+ I follow some blogs. If you follow what I uploaded, you could understand step of CNN
+
+#Pytorch
+ nn.funx
+  -nn.Linear : https://pytorch.org/docs/stable/_modules/torch/nn/modules/linear.html
+    please read docs
